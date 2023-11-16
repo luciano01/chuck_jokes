@@ -7,12 +7,12 @@ Soon...
 ## For developers
 > To clone locally:
 ```
-$ git clone git@github.com:luciano01/chuck_norris_jokes.git
-$ cd chuck_norris_jokes
+$ git clone git@github.com:luciano01/chuck_jokes.git
+$ cd chuck_jokes
 ```
 > Open the project in an editor, if you use VS Code, follow this:
 ```
-$ cd crud_firebase
+$ cd chuck_jokes
 $ code .
 ```
 > To run, follow this on terminal:
