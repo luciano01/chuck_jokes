@@ -5,7 +5,7 @@ import 'package:mocktail/mocktail.dart';
 import 'package:chuck_jokes/features/chuck_jokes/domain/domain.dart';
 
 class MockJokeByCategoryRepository extends Mock
-    implements JokeByCategoryRepository {}
+    implements JokeCategoriesRepository {}
 
 void main() {
   late MockJokeByCategoryRepository mockJokeByCategoryRepository;
