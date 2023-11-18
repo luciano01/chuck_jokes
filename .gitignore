@@ -47,3 +47,4 @@ app.*.map.json
 pubspec.lock
 /.vscode
 /.fvm
+analysis_options.yaml

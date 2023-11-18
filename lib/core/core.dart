@@ -4,3 +4,4 @@ export 'enums/enums.dart';
 export 'error/error.dart';
 export 'network/network.dart';
 export 'routes/routes.dart';
+export 'utils/utils.dart';
