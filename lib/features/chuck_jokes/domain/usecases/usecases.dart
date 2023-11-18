@@ -1,1 +1,1 @@
-export 'joke_categories_usecase.dart';
+export 'joke_categories_usecase_impl.dart';

@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:mocktail/mocktail.dart';
 
 import 'package:chuck_jokes/core/core.dart';
-import 'package:chuck_jokes/features/chuck_jokes/data/datasources/joke_categories_remote_data_source.dart';
+import 'package:chuck_jokes/features/chuck_jokes/data/datasources/joke_categories_remote_datasource_impl.dart';
 import 'package:chuck_jokes/features/chuck_jokes/domain/domain.dart';
 
 import '../../../../utils/json_reader.dart';

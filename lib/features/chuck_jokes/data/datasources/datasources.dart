@@ -1,1 +1,1 @@
-export 'joke_categories_remote_data_source.dart';
+export 'joke_categories_remote_datasource_impl.dart';
