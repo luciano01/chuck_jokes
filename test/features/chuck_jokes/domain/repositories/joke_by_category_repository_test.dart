@@ -5,7 +5,7 @@ import 'package:mocktail/mocktail.dart';
 import 'package:chuck_jokes/features/chuck_jokes/domain/domain.dart';
 
 class MockJokeByCategoryRepository extends Mock
-    implements JokeCategoriesRepository {}
+    implements JokeByCategoryRepository {}
 
 void main() {
   late MockJokeByCategoryRepository mockJokeByCategoryRepository;
@@ -14,15 +14,26 @@ void main() {
     mockJokeByCategoryRepository = MockJokeByCategoryRepository();
   });
 
-  test('Should return a List of Category if request is successful.', () async {
-    const mockCategory = CategoryEntity(category: 'dev');
-    const mockListOfCategory = [mockCategory];
+  test('Should return a Joke By Category if request is successful.', () async {
+    const mockJokeEntity = JokeEntity(
+      categories: [],
+      createdAt: '',
+      iconUrl: '',
+      id: '',
+      updatedAt: '',
+      url: '',
+      value: '',
+    );
 
-    when(() => mockJokeByCategoryRepository.getCategories())
-        .thenAnswer((_) async => const Right(mockListOfCategory));
+    const mockCategory = 'Dev';
 
-    final result = await mockJokeByCategoryRepository.getCategories();
+    when(() => mockJokeByCategoryRepository.getJokeByCategory(
+            category: mockCategory))
+        .thenAnswer((_) async => const Right(mockJokeEntity));
 
-    expect(result, const Right(mockListOfCategory));
+    final result = await mockJokeByCategoryRepository.getJokeByCategory(
+        category: mockCategory);
+
+    expect(result, const Right(mockJokeEntity));
   });
 }
