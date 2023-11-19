@@ -45,7 +45,7 @@ void main() {
     verify(() => mockJokeCategoriesRemoteDatasource.getCategories());
   });
 
-  test('Should return a List of Categories from Datasource no has connection.',
+  test('Should return a ServerException from Datasource if no has connection.',
       () async {
     when(() => mockNetworkCheck.hasConnection).thenAnswer((_) async => false);
 
