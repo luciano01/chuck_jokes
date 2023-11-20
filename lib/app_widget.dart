@@ -12,7 +12,7 @@ class AppWidget extends StatelessWidget {
       title: 'Chuck Jokes',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.orange,
+          seedColor: Colors.deepOrange,
         ),
         textTheme: GoogleFonts.montserratTextTheme(),
         useMaterial3: true,

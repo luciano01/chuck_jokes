@@ -19,6 +19,9 @@ abstract class HomeState with Store {
   }
 
   @observable
+  bool isLoading = false;
+
+  @observable
   int selectedCategoryIndex = 0;
 
   @observable
@@ -59,6 +62,7 @@ abstract class HomeState with Store {
   /// Get a Joke by Category from the JokeByCategorysUsecase.
   @action
   Future<void> getJokeByCategory() async {
+    isLoading = true;
     final result = await _jokeByCategoryUsecaseImpl.getJokeByCategory(
       category: categorySelected.category,
     );
@@ -67,6 +71,7 @@ abstract class HomeState with Store {
       (failure) {},
       (success) {
         jokeByCategory = success;
+        isLoading = false;
       },
     );
   }

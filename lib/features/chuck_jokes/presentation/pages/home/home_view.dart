@@ -148,12 +148,18 @@ class HomeView extends StatelessWidget {
                       ),
                       children: [
                         Observer(builder: (_) {
-                          return Text(
-                            textAlign: TextAlign.center,
-                            homeState.jokeByCategory.value,
-                            style: const TextStyle(
-                              fontSize: 18,
-                              height: 2.3,
+                          return Visibility(
+                            visible: !homeState.isLoading,
+                            replacement: const Center(
+                              child: CircularProgressIndicator(),
+                            ),
+                            child: Text(
+                              textAlign: TextAlign.center,
+                              homeState.jokeByCategory.value,
+                              style: const TextStyle(
+                                fontSize: 18,
+                                height: 2.3,
+                              ),
                             ),
                           );
                         }),
