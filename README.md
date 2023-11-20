@@ -27,6 +27,12 @@ $ flutter run --release
 ## Built with
 - [Dart programming language](https://dart.dev/)
 - [Flutter](https://flutter.dev/)
+- [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- [Http](https://pub.dev/packages/http)
+- [Dartz](https://pub.dev/packages/dartz)
+- [Flutter Modular](https://pub.dev/packages/flutter_modular)
+- [Mobx](https://pub.dev/packages/mobx)
+- [Mocktail](https://pub.dev/packages/mocktail)
 
 ## Author
 - Luciano Martins ([Linkedin](https://br.linkedin.com/in/luciano01))
