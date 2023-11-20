@@ -42,12 +42,52 @@ mixin _$HomeStateMobx on HomeState, Store {
     });
   }
 
+  late final _$jokeByCategoryAtom =
+      Atom(name: 'HomeState.jokeByCategory', context: context);
+
+  @override
+  JokeEntity get jokeByCategory {
+    _$jokeByCategoryAtom.reportRead();
+    return super.jokeByCategory;
+  }
+
+  @override
+  set jokeByCategory(JokeEntity value) {
+    _$jokeByCategoryAtom.reportWrite(value, super.jokeByCategory, () {
+      super.jokeByCategory = value;
+    });
+  }
+
+  late final _$categorySelectedAtom =
+      Atom(name: 'HomeState.categorySelected', context: context);
+
+  @override
+  CategoryEntity get categorySelected {
+    _$categorySelectedAtom.reportRead();
+    return super.categorySelected;
+  }
+
+  @override
+  set categorySelected(CategoryEntity value) {
+    _$categorySelectedAtom.reportWrite(value, super.categorySelected, () {
+      super.categorySelected = value;
+    });
+  }
+
   late final _$getJokeCategoriesAsyncAction =
       AsyncAction('HomeState.getJokeCategories', context: context);
 
   @override
   Future<void> getJokeCategories() {
     return _$getJokeCategoriesAsyncAction.run(() => super.getJokeCategories());
+  }
+
+  late final _$getJokeByCategoryAsyncAction =
+      AsyncAction('HomeState.getJokeByCategory', context: context);
+
+  @override
+  Future<void> getJokeByCategory() {
+    return _$getJokeByCategoryAsyncAction.run(() => super.getJokeByCategory());
   }
 
   late final _$HomeStateActionController =
@@ -65,10 +105,23 @@ mixin _$HomeStateMobx on HomeState, Store {
   }
 
   @override
+  void getSelectCategory() {
+    final _$actionInfo = _$HomeStateActionController.startAction(
+        name: 'HomeState.getSelectCategory');
+    try {
+      return super.getSelectCategory();
+    } finally {
+      _$HomeStateActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 selectedCategoryIndex: ${selectedCategoryIndex},
-listOfCategories: ${listOfCategories}
+listOfCategories: ${listOfCategories},
+jokeByCategory: ${jokeByCategory},
+categorySelected: ${categorySelected}
     ''';
   }
 }

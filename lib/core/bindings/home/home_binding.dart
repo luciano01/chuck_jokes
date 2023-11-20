@@ -9,6 +9,7 @@ import '../../core.dart';
 class HomeBinding extends Module {
   @override
   void binds(Injector i) {
+    // Joke Categories Injections.
     i.add<JokeCategoriesRemoteDataSource>(
       () => JokeCategoriesRemoteDataSourceImpl(i.get<Client>()),
     );
@@ -22,8 +23,24 @@ class HomeBinding extends Module {
       () => JokeCategoriesUsecaseImpl(i.get<JokeCategoriesRepository>()),
     );
 
+    // Joke by Category Injections.
+    i.add<JokeByCategoryRemoteDataSource>(
+      () => JokeByCategoryRemoteDataSourceImpl(i.get<Client>()),
+    );
+
+    i.add<JokeByCategoryRepository>(
+      () => JokeByCategoryRepositoryImpl(
+          i.get<JokeByCategoryRemoteDataSource>(), i.get<NetworkCheck>()),
+    );
+
+    i.add<JokeByCategoryUsecase>(
+      () => JokeByCategoryUsecaseImpl(i.get<JokeByCategoryRepository>()),
+    );
+
+// HomeState Injections.
     i.add<HomeStateMobx>(
-      () => HomeStateMobx(i.get<JokeCategoriesUsecase>()),
+      () => HomeStateMobx(
+          i.get<JokeCategoriesUsecase>(), i.get<JokeByCategoryUsecase>()),
     );
   }
 

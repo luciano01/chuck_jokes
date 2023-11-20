@@ -19,6 +19,18 @@ class JokeEntity extends Equatable {
     required this.value,
   });
 
+  factory JokeEntity.empty() {
+    return const JokeEntity(
+      categories: [],
+      createdAt: '',
+      iconUrl: '',
+      id: '',
+      updatedAt: '',
+      url: '',
+      value: '',
+    );
+  }
+
   @override
   List<Object?> get props => [
         [],

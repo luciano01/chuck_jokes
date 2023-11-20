@@ -7,6 +7,12 @@ class CategoryEntity extends Equatable {
     required this.category,
   });
 
+  factory CategoryEntity.empty() {
+    return const CategoryEntity(
+      category: 'animal',
+    );
+  }
+
   @override
   List<Object?> get props => [
         category,

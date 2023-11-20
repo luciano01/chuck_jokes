@@ -30,7 +30,9 @@ class HomeView extends StatelessWidget {
         child: const Icon(
           Icons.refresh_rounded,
         ),
-        onPressed: () {},
+        onPressed: () {
+          homeState.getSelectCategory();
+        },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endContained,
       bottomNavigationBar: Container(
@@ -144,15 +146,17 @@ class HomeView extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                         horizontal: 25,
                       ),
-                      children: const [
-                        Text(
-                          textAlign: TextAlign.center,
-                          "Chuck Norris is the only human being to display the Heisenberg uncertainty principle - you can never know both exactly where and how quickly he will roundhouse-kick you in the face.",
-                          style: TextStyle(
-                            fontSize: 18,
-                            height: 2.3,
-                          ),
-                        ),
+                      children: [
+                        Observer(builder: (_) {
+                          return Text(
+                            textAlign: TextAlign.center,
+                            homeState.jokeByCategory.value,
+                            style: const TextStyle(
+                              fontSize: 18,
+                              height: 2.3,
+                            ),
+                          );
+                        }),
                       ],
                     ),
                   ),
