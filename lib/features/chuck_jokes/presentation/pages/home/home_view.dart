@@ -35,9 +35,8 @@ class HomeView extends StatelessWidget {
         },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endContained,
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 86,
-        color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.only(
             left: 16,
