@@ -2,7 +2,9 @@
 This Flutter-powered project consumes the chucknorris.io API which generates Chuck Norris jokes randomly by category.
 
 ## Screenshots
-Soon...
+<p float="left">
+  <img width="200" src="https://github.com/luciano01/chuck_jokes/blob/master/lib/core/assets/screenshots/HomeView.png">
+</p>
 
 ## For developers
 > To clone locally:
