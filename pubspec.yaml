@@ -18,6 +18,10 @@ dependencies:
   dartz: ^0.10.1
   http: ^1.1.0
   internet_connection_checker: ^1.0.0+1
+  flutter_modular: ^6.3.2
+  mobx: ^2.2.1
+  flutter_mobx: ^2.2.0
+  google_fonts: ^6.1.0
 
 dev_dependencies:
   flutter_test:
@@ -26,6 +30,8 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
   mocktail: ^1.0.1
+  mobx_codegen: ^2.4.0
+  build_runner: ^2.4.6
 
 flutter:
   uses-material-design: true
