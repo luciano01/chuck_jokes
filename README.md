@@ -18,7 +18,7 @@ Build the project as release mode for a better experience:
 ```
 $ flutter clean
 $ flutter pub get
-$ flutter run --release
+$ flutter run
 ```
 
 ## Built with
