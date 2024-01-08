@@ -14,7 +14,7 @@ Enter the cloned project directory with the command:
 ```
 $ cd chuck_jokes
 ```
-Build the project as release mode for a better experience:
+Open an Android emulator or connect your smartphone to your computer and execute the following commands:
 ```
 $ flutter clean
 $ flutter pub get
