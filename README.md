@@ -2,7 +2,7 @@
 This Flutter-powered project consumes the chucknorris.io API which generates Chuck Norris jokes randomly by category.
 
 ## Demo
-https://github.com/luciano01/chuck_jokes/assets/28585974/410c73bb-65bb-4766-98ba-66b449c5bd74
+https://github.com/luciano01/chuck_jokes/assets/28585974/03465e83-ba94-48ea-874f-7c94a41e90e7
 
 ## For developers
 Create a clone of the target repository:
